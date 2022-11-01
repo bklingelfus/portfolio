@@ -1,0 +1,120 @@
+/* - - - - - - MAIN STYLE - - - - - - */
+*{
+    border: 1px solid black;
+}
+body {
+    margin: 0 2px 0 2px;
+    width: 98vw;
+    height: 100vh;
+    background-color: whitesmoke;
+    text-align: center;
+}
+
+/* - - - - - - HEADER STYLE - - - - - - */
+.header {
+    height: 8%;
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+}
+    .header div {
+        flex: 1;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        border: 1px solid #ccc;
+        background-color: lightgreen;
+    }
+
+        .head-left, .logo {margin-right: auto;}
+        .head-right, .resume {margin-left: auto;}
+
+/* - - - - - - MAIN STYLE - - - - - - */
+.main {
+    height: 84%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+    .main .buttons-left {
+        display: flex;
+        height: 100%;
+    }
+    .main .buttons-right {
+        display: flex;
+        height: 100%;
+    }
+        .right-side, .left-side {
+            height: 100%;
+            width: 35px;
+            margin: 0;
+        }
+        .left-side {
+            transform: scale(-1,-1);
+            writing-mode: vertical-rl;
+        }
+        .right-side {
+            writing-mode: vertical-lr;
+        }
+
+    #home {
+        display: block;
+    }
+        #home-page {
+            display: flex;
+        }
+
+    #projects {
+        display: none;
+    }
+
+    #bio {
+        display: none;
+    }
+
+    #experiences {
+        display: none;
+    }
+
+    #contact {
+        display: none;
+    }
+
+/* - - - - - - FOOTER STYLE - - - - - - */
+.footer {
+    height: 7%;
+    min-height: 30px;
+    display: flex;
+    align-items: center;
+}
+    .footer div {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .social-media {
+        max-width: 15%;
+    }
+        .line {
+            border: 1px solid black;
+            height: 1px;
+            width: 100px;
+            margin-right: 10px;
+        }
+        .social-media ion-icon {
+            vertical-align: middle;
+            margin: 0 3px;
+            color: black;
+        }
+
+    .dark-mode {
+    }
+        button .dark-mode {
+        }
+    .footer-text {
+    }
+        .footer-text p {
+        }
+
