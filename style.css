@@ -1,16 +1,31 @@
+/* - - - - - - STYLE VARIABLES - - - - - - */
+:root { 
+    /* Color palette */
+    --space-blue: #45567b;
+    /* Color assignments */
+    --background: whitesmoke;
+    --font-color: var(--space-blue);   
+}
+
 /* - - - - - - MAIN STYLE - - - - - - */
 *{
     border: 1px solid black;
 }
 body {
-    margin: 0 2px 0 2px;
+    margin: 0 2px;
     width: 98vw;
-    height: 100vh;
-    background-color: whitesmoke;
+    /* height: 100vh; */
+    background-color: var(--background);
+    color: var(--font-color);
     text-align: center;
 }
 
 /* - - - - - - HEADER STYLE - - - - - - */
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%
+}
 .header {
     height: 8%;
     min-height: 40px;
@@ -25,60 +40,144 @@ body {
         border: 1px solid #ccc;
         background-color: lightgreen;
     }
-
         .head-left, .logo {margin-right: auto;}
         .head-right, .resume {margin-left: auto;}
+
+        .logo {
+            width: 100%;
+        }
+            .logo-img {
+                width: auto;
+                height: 7vh;
+                padding: 0;
+                margin: 0;
+            }
+        .resume {
+            height: 7vh;
+        }
 
 /* - - - - - - MAIN STYLE - - - - - - */
 .main {
     height: 84%;
+    min-height: 90vh;
+    width: auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
+/* side buttons */
+.right-side, .left-side {
+    height: 100vh;
+    width: 35px;
+    margin: 0;
+}
+#on-left h1, #on-right h1 {
+    display: block;
+}
+#off-left h1, #off-right h1 {
+    display: none;
+}
     .main .buttons-left {
-        display: flex;
+        display: flex;;
         height: 100%;
     }
-    .main .buttons-right {
-        display: flex;
-        height: 100%;
-    }
-        .right-side, .left-side {
-            height: 100%;
-            width: 35px;
-            margin: 0;
-        }
         .left-side {
             transform: scale(-1,-1);
             writing-mode: vertical-rl;
         }
+        #on-left, #off-left {
+            display: flex;
+
+        }
+    .main .buttons-right {
+        display: flex;
+        height: 100%;
+    }
         .right-side {
             writing-mode: vertical-lr;
         }
-
-    #home {
-        display: block;
-    }
-        #home-page {
+        #on-right, #off-right {
             display: flex;
+
         }
-
-    #projects {
-        display: none;
+    
+/* sections */
+#main-display div {
+    display: none;
+    height: 100%;
+    width: 100%;
+}
+    #main-display div:first-of-type {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
     }
+/* bio */
 
-    #bio {
-        display: none;
+/* projects */
+.projects-carousel {
+    flex-direction: row;
+    align-items: center;
+}
+    .projects-carousel ion-icon {
+        height: 5vh;
+        width: 3vw;
+        margin: 1vh;
     }
+    .project-imgs {
+        display: flex;
+        align-items: center;
+    }
+        .project-imgs img {
+            display: none;
+        }
+            .project-imgs img:first-of-type {
+                display: block;
+                height: 50vh;
+                width: 40vw;
+            }
+        .modal-project {
+            background-color: rgba(0,0,0,0.4);
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            z-index: 1;
+            overflow: auto;  
+            visibility: hidden;         
+        }
+            .modal-box {
+                background-color: white;
+                height: 500px;
+                width: 500px;
+                border-radius: 2px;
+                margin: 150px auto;
+                box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+                padding: 2%;
+                z-index: 2;
+            } 
+                .modal h1 {
+                    font-size: 8vh;
+                }
+                .modal h2 {
+                    font-size: 4vh;
+                }
+                .modal p {
+                    font-size: 2vh;
+                }
+/* Home */
 
-    #experiences {
-        display: none;
-    }
+/* Experiences */
 
-    #contact {
-        display: none;
-    }
+/* Contact */
+#contact {
+    width: 1000px;
+}
+.social-contact {
+    display: flex;
+    height: 100%;
+
+} 
 
 /* - - - - - - FOOTER STYLE - - - - - - */
 .footer {
@@ -86,6 +185,7 @@ body {
     min-height: 30px;
     display: flex;
     align-items: center;
+    bottom: 0;
 }
     .footer div {
         flex: 1;
@@ -94,27 +194,72 @@ body {
         justify-content: center;
     }
 
-    .social-media {
-        max-width: 15%;
+/* social media */
+.social-media {
+    max-width: 15%;
+}
+    .line {
+        border: 1px solid black;
+        height: 1px;
+        width: 100px;
+        margin-right: 10px;
     }
-        .line {
-            border: 1px solid black;
-            height: 1px;
-            width: 100px;
-            margin-right: 10px;
+    .social-media ion-icon {
+        vertical-align: middle;
+        margin: 0 3px;
+        color: black;
+    }
+
+/* text */
+
+
+/* dark-mode */
+label {
+    position: relative;
+    display: inline-block;
+    width: 30px;
+    height: 20px;
+    margin-right: 1vw;
+}
+    label input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+        input:checked + .slider {
+            background-color: var(--space-blue);
         }
-        .social-media ion-icon {
-            vertical-align: middle;
-            margin: 0 3px;
-            color: black;
+        input:checked + .slider:before {
+            transform: translateX(10px);
         }
 
-    .dark-mode {
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    border-radius: 10px;
+    transition: .4s;
+}
+    .slider:before {
+        position: absolute;
+        content: '';
+        height: 15px;
+        width: 15px;
+        left: 2px;
+        bottom: 1px;
+        top: 1px;
+        background-color: white;
+        border-radius: 50%;
+        transition: .4s;
     }
-        button .dark-mode {
-        }
-    .footer-text {
-    }
-        .footer-text p {
-        }
 
+/* MEDIA QUERY */  
+@media screen and (max-width: 600px) {
+    #on-left, #on-right {
+        display: none;
+    }
+}

@@ -13,48 +13,126 @@
 </head>
 <body>
     <!-- Header -->
-    <div class="header">
-        <div class="logo">
-            <img class='logo-img' src="" alt="logo">
+    <div class="sticky">
+        <div class="header">
+            <div class="logo">
+                <img class='logo-img' src="logo_dark.png" alt="logo">
+            </div>
+            <div class="head-left">
+                <button class="head-button bio-button">Bio</button>
+                <button class="head-button projects-button">Projects</button>
+            </div>
+            <div class="home">
+                <button class="home-button">Home</button>
+            </div>
+            <div class="head-right">
+                <button class="head-button experiences-button">Experiences</button>
+                <button class="head-button contact-button">Contact</button>
+            </div>
+            <div class="resume">
+                <a href="Bernardo-Klingelfus-Resume.pdf" download="">Resume <ion-icon name="cloud-download-outline"></ion-icon></a>
+            </div>
         </div>
-        <div class="head-left">
-            <button class="head-button project-button">Projects</button>
-            <button class="head-button bio-button">Bio</button>
-        </div>
-        <div class="home">
-            <button class="home-button">Home</button>
-        </div>
-        <div class="head-right">
-            <button class="head-button experiences-button">Experiences</button>
-            <button class="head-button contact-button">Contact</button>
-        </div>
-        <div class="resume">
-            <button class="resume-button">Resume</button>
-        </div>
-    </div>
+    </div>    
     <!-- Main Space -->
     <div class="main">
         <div class="buttons-left">
-            <h1 class="project-button left-side">projects</h1>
-            <h1 class="bio-button left-side">bio</h1>
-            <h1 class="home-button left-side">home</h1>
-            <h1 class="experiences-button left-side">experiences</h1>
+            <div id="on-left">
+                <h1 class="bio-button left-side" id="L1">bio</h1>
+                <h1 class="projects-button left-side" id="L2">projects</h1>
+            </div>
+            <div id="off-left">
+                <h1 class="home-button left-side" id="L3">home</h1>
+                <h1 class="experiences-button left-side" id="L4">experiences</h1>
+            </div>            
         </div>
-        <div id="projects"></div>
-        <div id="bio"></div>
-        <div id="home">
-            <div id="home-page">
+        <div id="main-display">
+            <div id="home">
                 <h1>creative</h1>
                 <h1>&lt;code&gt;</h1>
             </div>
+            <div id="projects">
+                <h1>projects</h1>
+                <div class="projects-carousel">
+                    <ion-icon id='left-arrow' name="chevron-back-outline"></ion-icon>
+                    <div class="project-imgs">
+                        <img id='project1' src="" alt="Coming soon... 1">
+                        <div class="modal-project" id="P1">
+                            <div class="modal-box">
+                                <h1 class="modal">Project Name</h1>
+                                <p class="modal">Tools Used: ...</p>
+                                <h2 class=modal>Description</p>
+                                <p class="modal">project description</p>
+                            </div>
+                        </div>
+                        <img id='project2' src="" alt="Coming soon... 2">
+                        <div class="modal-project" id="P2">
+                            <div class="modal-box">
+                                <h1 class="modal">Project Name</h1>
+                                <p class="modal">Tools Used: ...</p>
+                                <h2 class=modal>Description</p>
+                                <p class="modal">project description</p>
+                            </div>
+                        </div>
+                        <img id='project3' src="" alt="Coming soon... 3">
+                        <div class="modal-project" id="P3">
+                            <div class="modal-box">
+                                <h1 class="modal">Project Name</h1>
+                                <p class="modal">Tools Used: ...</p>
+                                <h2 class=modal>Description</p>
+                                <p class="modal">project description</p>
+                            </div>
+                        </div>
+                    </div>
+                    <ion-icon id='right-arrow' name="chevron-forward-outline"></ion-icon>
+                </div>
+            </div>
+            <div id="bio">
+                <h1>bio</h1>
+                <p>introduction</p>                
+                <img class='bio-img' src="" alt="DNA">
+                <h3>education</h3>
+                <p>description</p>
+                <h3>interests</h3>
+                <p>description</p>
+            </div>
+            <div id="experiences">
+                <h1>experiences</h1>
+                <h3>General Assembly</h3>
+                <p>description</p>
+                <h3>ExxonMobil</h3>
+                <p>description</p>
+                <h3>AIESEC</h3>
+                <p>description</p>
+            </div>
+            <div id="contact">
+                <h1>contact</h1>
+                <img class='profile-img' src="" alt="profile">
+                <div class="social-contact">
+                    <div id="contact-instagram">
+                        <a href="https://www.instagram.com/"><ion-icon name="logo-instagram"></ion-icon></a>
+                        <p>username</p>
+                    </div>
+                    <div id="contact-linkedin">
+                        <a href="https://linkedin.com/"><ion-icon name="logo-linkedin"></ion-icon></a>
+                        <p>username</p>
+                    </div>
+                    <div id="contact-github">
+                        <a href="https://github.com/"><ion-icon name="logo-github"></ion-icon></a>
+                        <p>username</p>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div id="experiences"></div>
-        <div id="contact"></div>
         <div class="buttons-right">
-            <h1 class="bio-button right-side">bio</h1>
-            <h1 class="home-button right-side">home</h1>
-            <h1 class="experiences-button right-side">experiences</h1>
-            <h1 class="contact-button right-side">contact</h1>
+            <div id="off-right">
+                <h1 class="projects-button right-side" id="R2">projects</h1>
+                <h1 class="home-button right-side" id="R3">home</h1>
+            </div>
+            <div id="on-right">
+                <h1 class="experiences-button right-side" id="R4">experiences</h1>
+                <h1 class="contact-button right-side" id="R5">contact</h1>
+            </div>
         </div>
     </div>
     <!-- Footer -->
@@ -67,7 +145,10 @@
             <a href="https://github.com/"><ion-icon name="logo-github"></ion-icon></a>
         </div>
         <div class="dark-mode">
-            <button class="dark-mode">O</button>
+            <label class="dark-mode">
+                <input type="checkbox">
+                <span class="slider round"></span>
+            </label>
             <p class="dark-mode">Dark Mode</p>
         </div>
         <div class="footer-text">
