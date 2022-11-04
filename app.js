@@ -8,10 +8,14 @@ const darkMode =()=> {
     if (darkModeTracker === 0){
         $(':root').css('--background', 'var(--space-blue)');
         $(':root').css('--font-color', 'whitesmoke');
+        $('.dark').css('display', 'block');
+        $('.light').css('display', 'none');
         darkModeTracker += 1;
     } else {
         $(':root').css('--background', 'whitesmoke');
         $(':root').css('--font-color', 'var(--space-blue)');
+        $('.dark').css('display', 'none');
+        $('.light').css('display', 'block');
         darkModeTracker -= 1;
     }
 };
@@ -37,6 +41,7 @@ const adjustSideButtons =(sectionPosition)=> {
 const sectionButton =(sectionID, sectionIndex)=> {
     changeMainDisplay(sectionID);
     adjustSideButtons(sectionIndex+1);
+    window.scrollTo(0,0);
 };
 
 const leftCarousel =()=> {

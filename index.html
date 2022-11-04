@@ -16,10 +16,13 @@
     <div class="sticky">
         <div class="header">
             <div class="logo">
-                <img class='logo-img' src="logo_dark.png" alt="logo">
+                <img class='logo-img light' src="imgs/Logo_Light.png" alt="logo">
+                <img class='logo-img dark' src="imgs/Logo_Dark.png" alt="logo">
             </div>
             <div class="head-left">
                 <button class="head-button bio-button">Bio</button>
+            </div>
+            <div class="head-left">
                 <button class="head-button projects-button">Projects</button>
             </div>
             <div class="home">
@@ -27,6 +30,8 @@
             </div>
             <div class="head-right">
                 <button class="head-button experiences-button">Experiences</button>
+            </div>
+            <div class="head-right">
                 <button class="head-button contact-button">Contact</button>
             </div>
             <div class="resume">
@@ -47,11 +52,11 @@
             </div>            
         </div>
         <div id="main-display">
-            <div id="home">
+            <section id="home">
                 <h1>creative</h1>
                 <h1>&lt;code&gt;</h1>
-            </div>
-            <div id="projects">
+            </section>
+            <section id="projects">
                 <h1>projects</h1>
                 <div class="projects-carousel">
                     <ion-icon id='left-arrow' name="chevron-back-outline"></ion-icon>
@@ -59,70 +64,99 @@
                         <img id='project1' src="" alt="Coming soon... 1">
                         <div class="modal-project" id="P1">
                             <div class="modal-box">
-                                <h1 class="modal">Project Name</h1>
-                                <p class="modal">Tools Used: ...</p>
-                                <h2 class=modal>Description</p>
-                                <p class="modal">project description</p>
+                                <h2 class="modal">Project Name 1</h1>
+                                <p class="modal">Tools Used: HTML, CSS, JavaScript & jQuery</p>
+                                <h2 class="modal">Project Description:</h1>
+                                <p class="modal">On this project we work ... </p>
                             </div>
                         </div>
                         <img id='project2' src="" alt="Coming soon... 2">
                         <div class="modal-project" id="P2">
                             <div class="modal-box">
-                                <h1 class="modal">Project Name</h1>
-                                <p class="modal">Tools Used: ...</p>
-                                <h2 class=modal>Description</p>
-                                <p class="modal">project description</p>
+                                <h2 class="modal">Project Name 2</h1>
+                                <p class="modal">Tools Used: HTML, CSS, JavaScript & jQuery</p>
+                                <h2 class="modal">Project Description:</h1>
+                                <p class="modal">On this project we work ... </p>
                             </div>
                         </div>
                         <img id='project3' src="" alt="Coming soon... 3">
                         <div class="modal-project" id="P3">
                             <div class="modal-box">
-                                <h1 class="modal">Project Name</h1>
-                                <p class="modal">Tools Used: ...</p>
-                                <h2 class=modal>Description</p>
-                                <p class="modal">project description</p>
+                                <h2 class="modal">Project Name 3</h1>
+                                <p class="modal">Tools Used: HTML, CSS, JavaScript & jQuery</p>
+                                <h2 class="modal">Project Description:</h1>
+                                <p class="modal">On this project we work ... </p>
                             </div>
                         </div>
                     </div>
                     <ion-icon id='right-arrow' name="chevron-forward-outline"></ion-icon>
                 </div>
-            </div>
-            <div id="bio">
+            </section>
+            <section id="bio">
                 <h1>bio</h1>
-                <p>introduction</p>                
-                <img class='bio-img' src="" alt="DNA">
-                <h3>education</h3>
-                <p>description</p>
-                <h3>interests</h3>
-                <p>description</p>
-            </div>
-            <div id="experiences">
+                <img id='bio-img' src="" alt="DNA">
+                <p>introduction</p>
+                <div class="education-section">
+                    <h3>education</h3>
+                    <img src="imgs/ufpr_fachada.jpeg" alt="education">
+                    <p>description</p>
+                </div>
+                <div class="interests-section">
+                    <h3>interests</h3>
+                    <img src="" alt="interests">
+                    <p>description</p>
+                </div>
+                <div class="hobby-section">
+                    <h3>hobbies</h3>
+                        <div>
+                            <img id='hobby1' src="" alt="hobbies">
+                            <p>description</p>
+                        </div>
+                        <div>
+                            <img id='hobby2' src="" alt="hobbies">
+                            <p>description</p>
+                        </div>
+                    <img id='hobby3' src="" alt="hobbies">
+                </div>
+            </section>
+            <section id="experiences">
                 <h1>experiences</h1>
-                <h3>General Assembly</h3>
-                <p>description</p>
-                <h3>ExxonMobil</h3>
-                <p>description</p>
-                <h3>AIESEC</h3>
-                <p>description</p>
-            </div>
-            <div id="contact">
+                <div id="exp1">
+                    <h3>General Assembly</h3>
+                    <img class='exp1-img' src="imgs/General_Assembly_logo.png" alt="General Assembly Logo">
+                    <p>description</p>
+                </div>
+                <div id="exp1">
+                    <h3>ExxonMobil</h3>
+                    <img class='exp2-img' src="imgs/Color-ExoonMobil-Logo.jpeg" alt="ExxonMobil Logo">
+                    <p>description</p>
+                </div>
+                <div id="exp1">
+                    <h3>AIESEC</h3>
+                    <img class='exp3-img' src="imgs/AIESEC_logo.png" alt="AIESEC Logo">
+                    <p>description</p>
+                </div>                
+            </section>
+            <section id="contact">
                 <h1>contact</h1>
-                <img class='profile-img' src="" alt="profile">
+                <img class='profile-img' src="imgs/profile_pic.png" alt="profile">
                 <div class="social-contact">
                     <div id="contact-instagram">
                         <a href="https://www.instagram.com/"><ion-icon name="logo-instagram"></ion-icon></a>
-                        <p>username</p>
+                        <p>@berklingelfus</p>
                     </div>
                     <div id="contact-linkedin">
                         <a href="https://linkedin.com/"><ion-icon name="logo-linkedin"></ion-icon></a>
-                        <p>username</p>
+                        <p>@Bernardo Klingelfus</p>
                     </div>
                     <div id="contact-github">
                         <a href="https://github.com/"><ion-icon name="logo-github"></ion-icon></a>
-                        <p>username</p>
+                        <p>@bklingelfus</p>
                     </div>
                 </div>
-            </div>
+                <img class='contact-logo light' src="imgs/Logo_Light_2.png" alt="logo">
+                <img class='contact-logo dark' src="imgs/Logo_Dark_2.png" alt="logo">
+            </section>
         </div>
         <div class="buttons-right">
             <div id="off-right">
