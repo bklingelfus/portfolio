@@ -4,7 +4,6 @@ const sections = ['bio','projects','home','experiences','contact'];
 
 // - - - - - - - FUNCTIONS - - - - - - - - -
 const darkMode =()=> {
-    // ADD Transition
     if (darkModeTracker === 0){
         $(':root').css('--background', 'var(--D1)');
         $(':root').css('--font-color', 'var(--D2)');
@@ -19,6 +18,10 @@ const darkMode =()=> {
         $(':root').css('--side-button-4-font', 'var(--D11)');
         $(':root').css('--footer', 'var(--D12)');
         $(':root').css('--resume-download', 'var(--D13)');
+        $(':root').css('--box-shadow', 'var(--D14)');
+        $(':root').css('--G1', 'var(--D15)');
+        $(':root').css('--G2', 'var(--D16)');
+        $(':root').css('--G3', 'var(--D17)');
         $('.dark').css('display', 'block');
         $('.light').css('display', 'none');
         darkModeTracker += 1;
@@ -36,6 +39,10 @@ const darkMode =()=> {
         $(':root').css('--side-button-4-font', 'var(--L11)');
         $(':root').css('--footer', 'var(--L12)');
         $(':root').css('--resume-download', 'var(--L13)');
+        $(':root').css('--box-shadow', 'var(--L14)');
+        $(':root').css('--G1', 'var(--L15)');
+        $(':root').css('--G2', 'var(--L16)');
+        $(':root').css('--G3', 'var(--L17)');
         $('.dark').css('display', 'none');
         $('.light').css('display', 'block');
         darkModeTracker -= 1;
@@ -59,8 +66,8 @@ const darkMode =()=> {
             $(`#R${i}`).prependTo('#on-right');
         }
         // fade ins
-        $(`.left-side`).fadeIn(3000);
-        $(`.right-side`).fadeIn(3000);
+        $(`.left-side`).fadeIn(500);
+        $(`.right-side`).fadeIn(500);
     };
 
 const sectionButton =(sectionID, sectionIndex)=> {
