@@ -4,7 +4,7 @@ const sections = ['bio','projects','home','experiences','contact'];
 
 // - - - - - - - FUNCTIONS - - - - - - - - -
 const darkMode =()=> {
-    if (darkModeTracker === 0){
+    if (darkModeTracker === 0){ // Dark Mode Changes
         $(':root').css('--background', 'var(--D1)');
         $(':root').css('--font-color', 'var(--D2)');
         $(':root').css('--social-icons', 'var(--D3)');
@@ -22,10 +22,13 @@ const darkMode =()=> {
         $(':root').css('--G1', 'var(--D15)');
         $(':root').css('--G2', 'var(--D16)');
         $(':root').css('--G3', 'var(--D17)');
+        $(':root').css('--hover-font', 'var(--D9)');
+        $(':root').css('--nav-border', 'var(--D6)');
+        $(':root').css('--home-background', 'var(--D16)');
         $('.dark').css('display', 'block');
         $('.light').css('display', 'none');
         darkModeTracker += 1;
-    } else {
+    } else { // Light Mode Changes 
         $(':root').css('--background', 'var(--L1)');
         $(':root').css('--font-color', 'var(--L2)');
         $(':root').css('--social-icons', 'var(--L3)');
@@ -43,6 +46,9 @@ const darkMode =()=> {
         $(':root').css('--G1', 'var(--L15)');
         $(':root').css('--G2', 'var(--L16)');
         $(':root').css('--G3', 'var(--L17)');
+        $(':root').css('--hover-font', 'var(--L1)');
+        $(':root').css('--nav-border', 'var(--L13)');
+        $(':root').css('--home-background', 'var(--L15)');
         $('.dark').css('display', 'none');
         $('.light').css('display', 'block');
         darkModeTracker -= 1;
@@ -59,16 +65,13 @@ const darkMode =()=> {
         $(`.right-side`).appendTo('#off-right');
         // left
         for (let i =1; i < sectionPosition; i++) {
-            $(`#L${i}`).appendTo('#on-left');
+            $(`#L${i}`).appendTo('#on-left').fadeIn(1000 -100*i);
         }
         // right
         for (let i = (sections.length)+1; i > sectionPosition; i--) {
-            $(`#R${i}`).prependTo('#on-right');
+            $(`#R${i}`).prependTo('#on-right').fadeIn(1000 -100*i);
         }
-        // fade ins
-        $(`.left-side`).fadeIn(500);
-        $(`.right-side`).fadeIn(500);
-    };
+    }
 
 const sectionButton =(sectionID, sectionIndex)=> {
     // fade outs
@@ -77,7 +80,7 @@ const sectionButton =(sectionID, sectionIndex)=> {
     // Functions
     changeMainDisplay(sectionID);
     adjustSideButtons(sectionIndex+1);
-    window.scrollTo(0,0);
+    window.animate(scrollTo(0,0), 2000);
 };
 
 const leftCarousel =()=> {
