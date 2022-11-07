@@ -13,3 +13,4 @@ for most of the work used flexboxes
 For the animations used CSS used the transition and keyframed feature
  And used simple media query for adjusting things according to size 
  <!-- site link -->
+https://bernardoklingelfus.netlify.app/
