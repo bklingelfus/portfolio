@@ -80,7 +80,7 @@ const sectionButton =(sectionID, sectionIndex)=> {
     // Functions
     changeMainDisplay(sectionID);
     adjustSideButtons(sectionIndex+1);
-    window.animate(scrollTo(0,0), 2000);
+    window.scrollTo(0,0);
 };
 
 const leftCarousel =()=> {
